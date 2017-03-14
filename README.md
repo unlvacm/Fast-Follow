@@ -28,9 +28,8 @@ Make sure you specify the path for java in your machine. This can be easily done
 environment variables and adding a new path JAVA_HOME.
 
 ![Image 1](https://github.com/unlvacm/Fast-Follow/blob/master/README_images/Win_Pics/env_var1.JPG)
-PICTURE env_var1.jpg
 
-PICTUE env_var2.jpg
+![Image 1](https://github.com/unlvacm/Fast-Follow/blob/master/README_images/Win_Pics/env_var2.JPG)
 
 ** MAKE sure you set up your JAVA_HOME variable value correctly in your environment variables.
 
