@@ -39,6 +39,7 @@ to view more. Scroll down and copy the cmd.exe command.
 
 Looks something like this:
 
+![Image 1](https://github.com/unlvacm/Fast-Follow/blob/master/README_images/Win_Pics/choco_cmd.JPG)
 PICTURE choco_cmd.jpg
 
 Copy that cmd.exe command and paste it into the command line terminal. Just type 'y' to agree to the
