@@ -27,7 +27,7 @@ Run the java installation exe and let it install into the default path.
 Make sure you specify the path for java in your machine. This can be easily done by going to your
 environment variables and adding a new path JAVA_HOME.
 
-![Image 1](https://github.com/unlvacm/Fast-Follow/README_images/Win_Pics/env_var1.jpg)
+![Image 1](https://github.com/unlvacm/Fast-Follow/blob/master/README_images/Win_Pics/env_var1.JPG)
 PICTURE env_var1.jpg
 
 PICTUE env_var2.jpg
