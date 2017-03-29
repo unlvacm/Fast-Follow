@@ -5,57 +5,73 @@
  */
 
 import React, { Component } from 'react';
+import QRCode from 'react-native-qrcode';
 import {
   AppRegistry,
-  Dimensions,
   StyleSheet,
   Text,
   View,
-  TouchableHighlight
+  TextInput
 } from 'react-native';
-import Camera from 'react-native-camera';
 
-export default class Hello extends Component {
+
+export default class AwesomeProject extends Component {
+  state = {
+    text: 'http://facebook.github.io/react-native/',
+  };
   render() {
     return (
       <View style={styles.container}>
-       <Camera
-         ref={(cam) => {
-           this.camera = cam;
-         }}
-         style={styles.preview}
-         aspect={Camera.constants.Aspect.fill}>
-         <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
-       </Camera>
-     </View>
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit index.android
+        </Text>
+        <Text style={styles.instructions}>
+          Double tap R on your keyboard to reload,{'\n'}
+          Shake or press menu button for dev menu
+        </Text>
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => this.setState({text: text})}
+          value={this.state.text}
+        />
+        <QRCode
+          value={this.state.text}
+          size={200}
+          bgColor='purple'
+          fgColor='white'/>
+      </View>
     );
-  }
-  takePicture() {
-    this.camera.capture()
-      .then((data) => console.log(data))
-      .catch(err => console.error(err));
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  },
-  preview: {
     flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
-    height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width
+    backgroundColor: '#F5FCFF',
   },
-  capture: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
-    padding: 10,
-    margin: 40
-  }
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+  input: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        margin: 10,
+        borderRadius: 5,
+        padding: 5,
+    }
 });
 
-AppRegistry.registerComponent('Hello', () => Hello);
+AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
